@@ -1,0 +1,23 @@
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+    @apply bg-darkBlue text-textGray;
+}
+
+/* Section Titles */
+.section-title {
+    @apply text-white font-bold text-3xl mb-6;
+}
+
+/* Cards & Containers */
+.card {
+    @apply bg-lightDarkBlue text-white p-6 rounded-lg shadow-lg border border-gray-600;
+}
+
+/* Pills */
+.pill {
+    @apply bg-lightDarkBlue text-textGray px-3 py-1 rounded-full text-sm font-medium;
+}
