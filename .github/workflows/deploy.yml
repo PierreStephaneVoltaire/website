@@ -33,6 +33,9 @@ jobs:
           yarn --version
           aws --version
           node --version
+      - name: install
+        run: |
+          yarn
       - name: build app
         run: |
           yarn build
