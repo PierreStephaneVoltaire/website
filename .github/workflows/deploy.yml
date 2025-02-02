@@ -1,0 +1,41 @@
+name: Deploy Website To S3
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+          uses: actions/setup-node@v2
+          with:
+            node-version: '22'
+      - name: Install Yarn
+        run: |
+          npm install -g yarn
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v3
+        with:
+          role-to-assume: arn:aws:iam::$AWS_ACCOUNT_ID:role/$ROLE_NAME
+          aws-region: $AWS_REGION
+      - name: Verify AWS CLI and Node.js
+        run: |
+          yarn --version
+          aws --version
+          node --version
+      - name: build app
+        run: |
+          yarn build
+      - name: Upload to S3
+        run: |
+          aws s3 sync ./dist s3://$BUCKET --delete
