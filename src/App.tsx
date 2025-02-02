@@ -1,4 +1,3 @@
-import React from "react";
 import {Education, Experience, Learning, Profile, Projects, Skills} from './components';
 import cvData from "./cv.json"
 
