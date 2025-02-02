@@ -23,12 +23,11 @@ jobs:
       - name: Install Yarn
         run: |
           npm install -g yarn
-          echo ${{ env.AWS_REGION }}
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v3
         with:
-          role-to-assume: arn:aws:iam::${{env.AWS_ACCOUNT_ID}}:role/$ROLE_NAME
-          aws-region: ${{ env.AWS_REGION }}
+          role-to-assume: arn:aws:iam::${{vars.AWS_ACCOUNT_ID}}:role/$ROLE_NAME
+          aws-region: ${{ vars.AWS_REGION }}
       - name: Verify AWS CLI and Node.js
         run: |
           yarn --version
@@ -39,4 +38,4 @@ jobs:
           yarn build
       - name: Upload to S3
         run: |
-          aws s3 sync ./dist s3://${{env.BUCKET}} --delete
+          aws s3 sync ./dist s3://${{vars.BUCKET}} --delete
