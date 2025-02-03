@@ -11,6 +11,10 @@ spec:
     vars:
     - key: domain_name
       value: psvoltaire.ca
+    env:
+      - name:  AWS_REGION
+        value: 'us-east-1'
+    
   writeConnectionSecretToRef:
     namespace:  crossplane-system
     name: terraform-workspace-website
