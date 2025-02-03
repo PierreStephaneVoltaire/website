@@ -12,7 +12,7 @@ const Projects = ({projects}: ProjectsSectionProps) => (
 
     <section className="mt-6 space-y-4">
         <h3 className="text-white text-2xl font-bold">Projects</h3>
-        <div className="grid md:grid-cols-2 gap-8 mt-6">
+        <div className="grid md:grid-cols-4 gap-8 mt-6">
             {projects.map((project, idx) => (
                 <div key={idx} className="bg-gray-800 rounded-lg p-6">
 

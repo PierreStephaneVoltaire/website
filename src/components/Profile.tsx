@@ -33,7 +33,7 @@ const Profile = ({profile}: ProfileSectionProps) => (
         </div>
         <div className="flex  flex-col justify-evenly py-5">
             <h3 className="text-white text-2xl font-bold">About Me</h3>
-            <p className="text-gray-300 mt-2 whitespace-pre">{profile.about}</p>
+            <p className="text-gray-300 mt-2 whitespace-pre-wrap">{profile.about}</p>
         </div>
     </div>
 );

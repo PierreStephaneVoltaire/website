@@ -11,7 +11,7 @@ interface ExperienceSectionProps {
 
 const Experience = ({experiences}: ExperienceSectionProps) => (
     <div className="mt-6 md:mt-0">
-        <h3 className="text-white text-2xl font-bold text-left sm:text-center ">Experience</h3>
+        <h3 className="text-white text-2xl font-bold text-left lg:text-center">Experience</h3>
         <div className="space-y-4 mt-4">
             {experiences.map((exp, idx) => (
                 <div key={idx} className="space-y-2">

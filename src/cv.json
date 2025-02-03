@@ -75,7 +75,7 @@
     {
       "name": "Kubernetes playground",
       "image": {
-        "url": ""
+        "url": "/argo.png"
       },
       "description": "Basic Eks setup with argo, crossplane, vault and jenkins. It's a starter env to play around with new tech.",
       "url": "https://argocd.psvoltaire.ca",
@@ -218,7 +218,7 @@
       },
       {
         "icon": "https://simpleicons.org/icons/amazondocumentdb.svg",
-        "name": "aws Documentdb"
+        "name": "Documentdb"
       },
       {
         "icon": "https://simpleicons.org/icons/elasticsearch.svg",
