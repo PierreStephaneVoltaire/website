@@ -12,7 +12,7 @@ spec:
     - key: domain_name
       value: psvoltaire.ca
   writeConnectionSecretToRef:
-    namespace: default
+    namespace:  crossplane-system
     name: terraform-workspace-website
   providerConfigRef:
     name: aws-ca-central-1
