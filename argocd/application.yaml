@@ -4,7 +4,7 @@ metadata:
   name: website
   namespace: argocd
 spec:
-  project: website
+  project: default
   source:
     repoURL: https://github.com/PierreStephaneVoltaire/website
     targetRevision: master
