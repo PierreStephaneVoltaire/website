@@ -17,6 +17,6 @@ spec:
     
   writeConnectionSecretToRef:
     namespace:  crossplane-system
-    name: terraform-website
+    name: terraform-workspace-website
   providerConfigRef:
     name: aws-ca-central-1
