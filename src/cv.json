@@ -29,35 +29,35 @@
       "startDate": "Mar 2021",
       "endDate": "Present",
       "summary": [
-        " Implemented and managed automated CI/CD pipelines, drastically cutting production deployment time from 20 man hours to 15 minutes using GitLab CI, CodeDeploy, Python, bash and Powershell",
-        "Streamlined production deployment and increased secure secret and application configuration injections by implementing automated build and deployment processes using Jenkins and Python/Node.js Lambda functions within 12 months.",
-        "Implemented effective debugging techniques for Java, Python, and Dotnet applications, playing a key role in restoring critical systems and preventing future outages.",
-        "Provisioned new environments for greenfield applications using Cloudformation, Terraform and AWS CDK within 6 months",
-        "Enhanced cloud-native application monitoring by integrating Datadog Application Performance Management (APM), improving performance visibility and enabling faster troubleshooting.",
-        "Migrated 6 legacy Maven and Dotnet applications to AWS within 2 years, provisioning cloud native resources, optimizing system performance and automating build, test, and deployment processes"
+        "Designed and implemented automated CI/CD pipelines that transformed deployment processes, cutting production deployment time from 20 hours to just 15 minutes with GitLab CI, CodeDeploy, Python, Bash, and PowerShell.",
+        "Built secure and efficient systems for managing secrets and application configurations through automated build and deployment processes using Jenkins and serverless Lambda functions in Python and Node.js.",
+        "Specialized debugging approaches for Java, Python, and .NET applications helped restore critical systems during outages and implemented preventative measures for future incidents.",
+        "Provisioned new cloud environments for greenfield applications using a variety of IaC tools, including CloudFormation, Terraform, and AWS CDK.",
+        "Enhanced monitoring capabilities by integrating Datadog APM across cloud-native applications, improving visibility into performance issues and accelerating troubleshooting.",
+        "Migrated 6 legacy Maven and .NET applications to AWS, provisioning cloud-native resources, optimizing system performance, and automating build, test, and deployment processes."
       ]
     },
     {
       "name": "Airborne App",
       "position": "FullStack Developer",
-      "startDate": "Aug 2021",
-      "endDate": "Mar 2020",
+      "startDate": "Mar 2020",
+      "endDate": "Aug 2021",
       "summary": [
-        "Developed features on existing Golang services that interact with multiple AWS services",
-        "Developed CI pipelines leveraging GitHub Actions and Terraform to automatically lint, execute unit and integration tests for incoming pull requests, and reduce the introduction of bugs in production",
-        "Implemented effective debugging techniques for Java, Python, and Dotnet applications, playing a key role in restoring critical systems and preventing future outages.",
-        "Developed a dynamic testing environment pipeline using GitHub actions, terraform and S3, accelerating frontend validation processes and streamlining collaboration between developers, product owners, and designers within 6 months"
+        "Developed new features for Golang microservices interacting with multiple AWS services, expanding platform capabilities.",
+        "Created CI pipelines with GitHub Actions and Terraform to automatically run linting, unit tests, and integration tests for all pull requests, significantly reducing bugs in production.",
+        "Applied advanced debugging techniques across Java, Python, and .NET applications to quickly identify and resolve critical system issues.",
+        "Built a dynamic testing environment pipeline using GitHub Actions, Terraform, and S3, accelerating frontend validation and improving collaboration between developers, product owners, and designers."
       ]
     },
     {
       "name": "EllisDon",
       "position": "FullStack Developer",
-      "startDate": "Mar 2021",
-      "endDate": "Apr 2020",
+      "startDate": "Apr 2020",
+      "endDate": "Mar 2021",
       "summary": [
-        "Developed and maintained services using ReactJS, Spring Boot (Java), Express (Node.js), NestJS (TypeScript),and MongoDB. Ensured seamless feature integration, bug resolution, and codebase enhancements for improved maintainability",
-        "Optimized project maintainability through automated CI pipelines for unit testing and code linting",
-        "Implemented tests using Junit and Jest to boost code coverage and enhanced code quality in frontend and backend applications."
+        "Built and maintained services using a diverse tech stack including ReactJS, Spring Boot (Java), Express (Node.js), NestJS (TypeScript), and MongoDB, ensuring seamless feature integration and continuous improvement.",
+        "Improved project maintainability by implementing automated CI pipelines for unit testing and code linting, resulting in consistent code quality.",
+        "Created comprehensive test suites with JUnit and Jest, increasing code coverage and enhancing overall code quality in both frontend and backend applications."
       ]
     },
     {
@@ -66,8 +66,8 @@
       "startDate": "Sep 2018",
       "endDate": "Mar 2019",
       "summary": [
-        "Developed a data aggregation feature using Vue.js, Python, and Flask to streamline data analysis from 3rd party APIs and website content.",
-        "Provisioned databases and virtual machines in DigitalOcean to host applications, reducing the developers-stakeholders feedback loop"
+        "Built a data aggregation system using Vue.js, Python, and Flask to streamline analysis of data from third-party APIs and website content.",
+        "Provisioned and managed databases and virtual machines in DigitalOcean to host applications, significantly reducing the feedback loop between developers and stakeholders."
       ]
     }
   ],
@@ -80,6 +80,14 @@
       "description": "Basic Eks setup with argo, crossplane, vault and jenkins. It's a starter env to play around with new tech.",
       "url": "https://argocd.psvoltaire.ca",
       "github": "https://github.com/PierreStephaneVoltaire/kubernetes-playground"
+    },
+    {
+      "name": "Personal Website",
+      "image": {
+        "url": "/website.png"
+      },
+      "description": "My personal website built with React and TypeScript, hosted on AWS S3 and CloudFront. I'm using Github actions to build and deploy the website. The bucket and cloudfront distribution are provisioned using terraform argocd and crossplane.",
+      "github": "https://github.com/PierreStephaneVoltaire/website"
     }
   ],
   "education": [
