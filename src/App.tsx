@@ -22,7 +22,7 @@ const App = () => {
                 </div>
                 <div className="w-full p-4">
                     <Projects projects={cvData.projects}/>
-                    <ResumeDownload resumeOptions={resumeOptions} />
+                    {/* <ResumeDownload resumeOptions={resumeOptions} /> */}
                 </div>
             </div>
         </div>
