@@ -3,7 +3,7 @@ import cvData from "./cv.json"
 
 const App = () => {
     // Google Analytics Measurement ID - Replace with your actual GA4 ID
-    const gaMeasurementId = "G-XXXXXXXXXX";
+    const gaMeasurementId = "G-0X7PYTTWVR";
     
     // Resume download options
     const resumeOptions = [

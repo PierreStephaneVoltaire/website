@@ -42,3 +42,5 @@ jobs:
       - name: Upload to S3
         run: |
           aws s3 sync ./dist s3://${{vars.BUCKET}} --delete
+          aws cloudfront create-invalidation --distribution-id ${{vars.DISTRIBUTION_ID}} --paths "/*"
+
