@@ -1,4 +1,3 @@
-// ProfileSection.tsx
 interface ProfileSectionProps {
     profile: {
         name: string;
