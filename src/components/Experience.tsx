@@ -21,7 +21,7 @@ const Experience = ({experiences}: ExperienceSectionProps) => (
                           {exp.position} @<br className="block md:hidden" />{exp.name}
                         </span>
                     </div>
-                    <ul className="list-disc pl-8 pb-2 pt-2 text-gray-300">
+                    <ul className="list-disc pl-4 pb-2 pt-2 text-gray-300">
                         {exp.summary.map((summary, i) => (
                             <li key={i} >{summary}</li>
                         ))}
