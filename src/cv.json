@@ -86,7 +86,9 @@
       "image": {
         "url": "/website.png"
       },
-      "description": "Personal website built with React and TypeScript, hosted on AWS S3 and CloudFront."  },
+      "description": "Personal website built with React and TypeScript, hosted on AWS S3 and CloudFront.",
+      "github": "https://github.com/PierreStephaneVoltaire/website"
+    },
     {
       "name": "vault-promoter",
       "image": {
