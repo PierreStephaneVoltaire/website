@@ -31,7 +31,7 @@
       "summary": [
         "Designed and implemented automated CI/CD pipelines that transformed deployment processes, cutting production deployment time from 20 hours to just 15 minutes with GitLab CI, CodeDeploy, Python, Bash, and PowerShell.",
         "Built secure and efficient systems for managing secrets and application configurations through automated build and deployment processes using Jenkins and serverless Lambda functions in Python and Node.js.",
-        "Specialized debugging approaches for Java, Python, and .NET applications helped restore critical systems during outages and implemented preventative measures for future incidents.",
+        "Implemented specialized debugging approaches for Java, Python, and .NET applications helped restore critical systems during outages and implemented preventative measures for future incidents.",
         "Provisioned new cloud environments for greenfield applications using a variety of IaC tools, including CloudFormation, Terraform, and AWS CDK.",
         "Enhanced monitoring capabilities by integrating Datadog APM across cloud-native applications, improving visibility into performance issues and accelerating troubleshooting.",
         "Migrated 6 legacy Maven and .NET applications to AWS, provisioning cloud-native resources, optimizing system performance, and automating build, test, and deployment processes."
