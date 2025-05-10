@@ -86,8 +86,14 @@
       "image": {
         "url": "/website.png"
       },
-      "description": "My personal website built with React and TypeScript, hosted on AWS S3 and CloudFront. I'm using Github actions to build and deploy the website. The bucket and cloudfront distribution are provisioned using terraform argocd and crossplane.",
-      "github": "https://github.com/PierreStephaneVoltaire/website"
+      "description": "Personal website built with React and TypeScript, hosted on AWS S3 and CloudFront."  },
+    {
+      "name": "vault-promoter",
+      "image": {
+        "url": "/secretz.png"
+      },
+      "description": "A solution for managing Secrets and Configs across multiple environments with secret promotion capabilities. Built as a CLI tool using Go.",
+      "github": "https://github.com/PierreStephaneVoltaire/secretz"
     }
   ],
   "education": [
@@ -354,5 +360,9 @@
     "Apache kafka",
     ".Net Core 7",
     "Istio (Service Mesh)"
+  ],
+  "hobbies": [
+
+
   ]
 }

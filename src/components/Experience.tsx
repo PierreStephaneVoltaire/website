@@ -15,13 +15,15 @@ const Experience = ({experiences}: ExperienceSectionProps) => (
         <div className="space-y-4 mt-4">
             {experiences.map((exp, idx) => (
                 <div key={idx} className="space-y-2">
-                    <div className="grid grid-cols-6 gap-4 text-white">
-                        <span className="col-span-2">{exp.startDate} - {exp.endDate}</span>
-                        <span className="col-span-4 text-xl">{exp.position} @ {exp.name}</span>
+                    <div className="flex flex-col items-center text-white md:grid md:grid-cols-6 md:gap-4 md:text-left md:items-start">
+                        <span className="mb-1 md:mb-0 md:col-span-2 md:text-left w-full">{exp.startDate} - {exp.endDate}</span>
+                        <span className="text-xl md:col-span-4 md:text-left  w-full">
+                          {exp.position} @<br className="block md:hidden" />{exp.name}
+                        </span>
                     </div>
                     <ul className="list-disc pl-8 pb-2 pt-2 text-gray-300">
                         {exp.summary.map((summary, i) => (
-                            <li key={i} className="pl-8">{summary}</li>
+                            <li key={i} >{summary}</li>
                         ))}
                     </ul>
                 </div>

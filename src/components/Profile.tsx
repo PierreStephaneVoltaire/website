@@ -31,9 +31,17 @@ const Profile = ({profile}: ProfileSectionProps) => (
 
 
         </div>
-        <div className="flex  flex-col justify-evenly py-5">
+        <div className="flex flex-col justify-evenly py-5">
             <h3 className="text-white text-2xl font-bold">About Me</h3>
             <p className="text-gray-300 mt-2 whitespace-pre-wrap">{profile.about}</p>
+        </div>
+        <div className="flex flex-col justify-evenly py-3 border-t border-gray-700">
+            <h3 className="text-white text-xl font-bold">Contact Policy</h3>
+            <p className="text-gray-300 mt-2">
+                <span className="bg-blue-600 text-white px-2 py-1 rounded-md text-sm mr-2">Employed but seeking new opportunities</span>
+                <br className="block md:hidden" />
+                <span className="mt-2 md:mt-0 inline-block">Email, LinkedIn direct message, or text responses within 48 hours.</span>
+            </p>
         </div>
     </div>
 );
