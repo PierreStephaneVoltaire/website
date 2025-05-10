@@ -1,9 +1,10 @@
-import {Education, Experience, GoogleAnalytics, Hobbies, Learning, Profile, Projects, ResumeDownload, SEO, Skills} from './components';
+import {Education, Experience, PostHog, Hobbies, Learning, Profile, Projects, ResumeDownload, SEO, Skills} from './components';
 import cvData from "./cv.json"
 
 const App = () => {
-    // Google Analytics Measurement ID - Replace with your actual GA4 ID
-    const gaMeasurementId = "G-0X7PYTTWVR";
+    // PostHog API Key and Host from environment variables
+    const posthogApiKey = import.meta.env.VITE_REACT_APP_PUBLIC_POSTHOG_KEY || "phc_d7xTA5JwrqsvYSehDS8f7PBkMmsoCnHJsxFmrPkeJAc";
+    const posthogApiHost = import.meta.env.VITE_REACT_APP_PUBLIC_POSTHOG_HOST || "https://us.i.posthog.com";
     
     // Resume download options
     const resumeOptions = [
@@ -16,8 +17,8 @@ const App = () => {
             {/* SEO Enhancements */}
             <SEO />
             
-            {/* Google Analytics - only active in production */}
-            <GoogleAnalytics measurementId={gaMeasurementId} />
+            {/* PostHog Analytics - only active in production */}
+            <PostHog apiKey={posthogApiKey} apiHost={posthogApiHost} />
             
             <div className="py-12 px-6 flex justify-evenly flex-wrap bg-darkblue">
                 {/* Left column - Profile, Skills, Education, Learning */}

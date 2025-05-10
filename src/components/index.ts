@@ -8,4 +8,5 @@ export {default as ResumeDownload} from './ResumeDownload.tsx';
 export {default as Hobbies} from './Hobbies.tsx';
 export {default as RippleButton} from './RippleButton.tsx';
 export {default as GoogleAnalytics} from './GoogleAnalytics.tsx';
+export {default as PostHog} from './PostHog.tsx';
 export {default as SEO} from './SEO.tsx';
