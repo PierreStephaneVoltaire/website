@@ -30,11 +30,12 @@
       "endDate": "Present",
       "summary": [
         "Designed and implemented automated CI/CD pipelines that transformed deployment processes, cutting production deployment time from 20 hours to just 15 minutes with GitLab CI, CodeDeploy, Python, Bash, and PowerShell.",
-        "Built secure and efficient systems for managing secrets and application configurations through automated build and deployment processes using Jenkins and serverless Lambda functions in Python and Node.js.",
-        "Implemented specialized debugging approaches for Java, Python, and .NET applications helped restore critical systems during outages and implemented preventative measures for future incidents.",
+        "Developed secure and efficient processes and tools for managing secrets and injecting application configurations using Jenkins and Lambda functions in Python and Node.js.",        "Implemented specialized debugging approaches for Java, Python, and .NET applications helped restore critical systems during outages and implemented preventative measures for future incidents.",
         "Provisioned new cloud environments for greenfield applications using a variety of IaC tools, including CloudFormation, Terraform, and AWS CDK.",
         "Enhanced monitoring capabilities by integrating Datadog APM across cloud-native applications, improving visibility into performance issues and accelerating troubleshooting.",
-        "Migrated 6 legacy Maven and .NET applications to AWS, provisioning cloud-native resources, optimizing system performance, and automating build, test, and deployment processes."
+        "Migrated 6 legacy Maven and .NET applications to AWS, provisioning cloud-native resources, optimizing system performance, and automating build, test, and deployment processes.",
+        "Built a Python FastAPI solution that safeguards our GitLab repositories, giving us peace of mind that our 1,000+ code repositories are protected against outages and accidental deletions, with deployment handled through ArgoCD and Kustomize for flexible environment configuration.",
+        "Tackled our aging EKS infrastructure by creating an automated upgrade process with GitLab CI and Terraform, eliminating tedious manual work across 20+ clusters and saving the company $6K monthly in extended support costs."
       ]
     },
     {
@@ -44,9 +45,8 @@
       "endDate": "Aug 2021",
       "summary": [
         "Developed new features for Golang microservices interacting with multiple AWS services, expanding platform capabilities.",
-        "Created CI pipelines with GitHub Actions and Terraform to automatically run linting, unit tests, and integration tests for all pull requests, significantly reducing bugs in production.",
-        "Applied advanced debugging techniques across Java, Python, and .NET applications to quickly identify and resolve critical system issues.",
-        "Built a dynamic testing environment pipeline using GitHub Actions, Terraform, and S3, accelerating frontend validation and improving collaboration between developers, product owners, and designers."
+        "Integrated user-facing components on frontend apps with React, TypeScript, and SASS, creating a smoother user experience and boosting overall app performance.",
+        "Built a dynamic testing environment pipeline using GitHub Actions, Terraform, and S3 that transformed our frontend validation process and brought developers, product owners, and designers together in a more streamlined workflow within just 6 months."
       ]
     },
     {
@@ -55,9 +55,8 @@
       "startDate": "Apr 2020",
       "endDate": "Mar 2021",
       "summary": [
-        "Built and maintained services using a diverse tech stack including ReactJS, Spring Boot (Java), Express (Node.js), NestJS (TypeScript), and MongoDB, ensuring seamless feature integration and continuous improvement.",
-        "Improved project maintainability by implementing automated CI pipelines for unit testing and code linting, resulting in consistent code quality.",
-        "Created comprehensive test suites with JUnit and Jest, increasing code coverage and enhancing overall code quality in both frontend and backend applications."
+        "Developed and maintained services using ReactJS, Spring Boot (Java), Express (Node.js), NestJS (TypeScript), and MongoDB, ensuring seamless feature integration, resolving bugs, and enhancing the codebase for better maintainability.",
+        "Optimized project quality through automated CI pipelines for unit testing and code linting, creating a more consistent development workflow."
       ]
     },
     {
