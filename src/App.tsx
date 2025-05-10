@@ -1,10 +1,8 @@
-import {Education, Experience, PostHog, Hobbies, Learning, Profile, Projects, ResumeDownload, SEO, Skills} from './components';
+import {Education, Experience, Hobbies, Learning, Profile, Projects, ResumeDownload, SEO, Skills} from './components';
 import cvData from "./cv.json"
 
 const App = () => {
-    // PostHog API Key and Host from environment variables
-    const posthogApiKey = import.meta.env.VITE_REACT_APP_PUBLIC_POSTHOG_KEY || "phc_d7xTA5JwrqsvYSehDS8f7PBkMmsoCnHJsxFmrPkeJAc";
-    const posthogApiHost = import.meta.env.VITE_REACT_APP_PUBLIC_POSTHOG_HOST || "https://us.i.posthog.com";
+    // PostHog is now configured in main.tsx with PostHogProvider
     
     // Resume download options
     const resumeOptions = [
@@ -17,8 +15,7 @@ const App = () => {
             {/* SEO Enhancements */}
             <SEO />
             
-            {/* PostHog Analytics - only active in production */}
-            <PostHog apiKey={posthogApiKey} apiHost={posthogApiHost} />
+            {/* PostHog Analytics is now configured in main.tsx */}
             
             <div className="py-12 px-6 flex justify-evenly flex-wrap bg-darkblue">
                 {/* Left column - Profile, Skills, Education, Learning */}
