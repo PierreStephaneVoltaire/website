@@ -77,7 +77,6 @@
         "url": "/argo.png"
       },
       "description": "Basic Eks setup with argo, crossplane, vault and jenkins. It's a starter env to play around with new tech.",
-      "url": "https://argocd.psvoltaire.ca",
       "github": "https://github.com/PierreStephaneVoltaire/kubernetes-playground"
     },
     {
