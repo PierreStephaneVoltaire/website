@@ -16,7 +16,7 @@ const Certifications = ({certifications}: CertificationsSectionProps) => (
         <ul className="mt-6 space-y-4">
             {certifications.map((cert, idx) => (
                 <li key={idx} className="text-gray-300">
-                    <div className="text-white">{cert.name}</div>
+                    <div className="text-white font-bold">{cert.name}</div>
                     <div>Issued by: {cert.issuer}</div>
                     <div>{cert.date}</div>
                 </li>
