@@ -1,12 +1,16 @@
 // ExperienceSection.tsx
+import ReactMarkdown from 'react-markdown';
+
+interface Experience {
+    name: string;
+    position: string;
+    startDate: string;
+    endDate: string;
+    summary: string[];
+}
+
 interface ExperienceSectionProps {
-    experiences: {
-        name: string;
-        position: string;
-        startDate: string;
-        endDate: string;
-        summary: string[];
-    }[];
+    experiences: Experience[];
 }
 
 const Experience = ({experiences}: ExperienceSectionProps) => (
@@ -18,12 +22,14 @@ const Experience = ({experiences}: ExperienceSectionProps) => (
                     <div className="flex flex-col items-center text-white md:grid md:grid-cols-6 md:gap-4 md:text-left md:items-start">
                         <span className="mb-1 md:mb-0 md:col-span-2 md:text-left w-full">{exp.startDate} - {exp.endDate}</span>
                         <span className="text-xl md:col-span-4 md:text-left  w-full">
-                          {exp.position} @<br className="block md:hidden" />{exp.name}
+                          {exp.position} @ <br className="block md:hidden" />{exp.name}
                         </span>
                     </div>
                     <ul className="list-disc pl-4 pb-2 pt-2 text-gray-300">
                         {exp.summary.map((summary, i) => (
-                            <li key={i} >{summary}</li>
+                            <li key={i}>
+                                <ReactMarkdown>{summary}</ReactMarkdown>
+                            </li>
                         ))}
                     </ul>
                 </div>

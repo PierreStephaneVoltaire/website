@@ -1,10 +1,10 @@
-import {Education, Experience, Hobbies, Learning, Profile, Projects, ResumeDownload, SEO, Skills} from './components';
+import {Education, Experience, Hobbies, Learning, Profile, Projects, ResumeDownload, SEO, Skills, Certifications} from './components';
 import cvData from "./cv.json"
 
 const App = () => {    
     const resumeOptions = [
-        { name: 'Developer Resume', path: '/resumes/Pierre_Voltaire_developer_resume.pdf' },
-        { name: 'DevOps Resume', path: '/resumes/Pierre_Voltaire_devops_resume.pdf' }
+        { name: 'DevOps Resume', path: '/resumes/Pierre_Voltaire_devops_resume.pdf' },
+        { name: 'Developer Resume', path: '/resumes/Pierre_Voltaire_developer_resume.pdf' }
     ];
 
     return (
@@ -15,6 +15,7 @@ const App = () => {
                 <div className="w-full lg:w-1/2 p-4">
                     <Profile profile={cvData.profile}/>
                     <Skills skills={cvData.skills}/>
+                    <Certifications certifications={cvData.skills.Certifications}/>
                     <Education education={cvData.education}/>
                     <Learning learning={cvData.learning}/>
                 </div>

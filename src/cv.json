@@ -29,13 +29,15 @@
       "startDate": "Mar 2021",
       "endDate": "Present",
       "summary": [
-        "Designed and implemented automated CI/CD pipelines that transformed deployment processes, cutting production deployment time from 20 hours to just 15 minutes with GitLab CI, CodeDeploy, Python, Bash, and PowerShell.",
-        "Developed secure and efficient processes and tools for managing secrets and injecting application configurations using Jenkins and Lambda functions in Python and Node.js.",        "Implemented specialized debugging approaches for Java, Python, and .NET applications helped restore critical systems during outages and implemented preventative measures for future incidents.",
-        "Provisioned new cloud environments for greenfield applications using a variety of IaC tools, including CloudFormation, Terraform, and AWS CDK.",
-        "Enhanced monitoring capabilities by integrating Datadog APM across cloud-native applications, improving visibility into performance issues and accelerating troubleshooting.",
-        "Migrated 6 legacy Maven and .NET applications to AWS, provisioning cloud-native resources, optimizing system performance, and automating build, test, and deployment processes.",
-        "Built a Python FastAPI solution that safeguards our GitLab repositories, giving us peace of mind that our 1,000+ code repositories are protected against outages and accidental deletions, with deployment handled through ArgoCD and Kustomize for flexible environment configuration.",
-        "Tackled our aging EKS infrastructure by creating an automated upgrade process with GitLab CI and Terraform, eliminating tedious manual work across 20+ clusters and saving the company $6K monthly in extended support costs."
+        "**Developed cloud-native applications** including a **FastAPI** (Python) GitLab backup solution protecting **∼1,000 repositories** against extended outages, with deployment orchestrated through **ArgoCD** and **Kustomize** for flexible environment management.",
+        "**Automated EKS cluster upgrades** for **20+ production clusters** using **GitLab CI** and **Terraform**, eliminating manual operations and **reducing AWS extended support costs by $6K/month**.",
+        "**Architected and implemented CI/CD pipelines** using **GitLab CI**, **CodeDeploy**, and custom **Python**/**Bash**/**Powershell** automation scripts, **reducing production deployment time by 94%** from hours to minutes.",
+        "**Developed** secure and efficient **processes and tools for managing secrets and injecting application** configurations using **Jenkins** and **Lambda** functions in **Python** and **Node.js**.",
+        "**Led security hardening initiatives** during the migration of **Java** and **.NET** web applications to AWS, **aligning with SOC 2 compliance** by enhancing network security with HTTPS and **ACM** certificates, encrypting **EFS** storage with **AWS KMS**, and utilizing IAM for access control enforcement.",
+        "**Migrated legacy source control systems** from **TFS** and **SVN** to **GitLab**, ensuring seamless version control transition and implementing **GitOps** workflows.",
+        "**Optimized artifact management** across **Sonatype Nexus**, **GitLab**, and **Amazon ECR** for **Java**, **.NET**, **Python** packages and Docker images, improving deployment reliability.",
+        "**Provisioned cloud environments** for greenfield applications using Infrastructure as Code tools including **CloudFormation**, **Terraform**, and **AWS CDK**, enabling rapid scalable deployments.",
+        "**Enhanced observability** by integrating **Datadog APM** into native cloud applications, **accelerating troubleshooting** and improving performance visibility."
       ]
     },
     {
@@ -44,19 +46,19 @@
       "startDate": "Mar 2020",
       "endDate": "Aug 2021",
       "summary": [
-        "Developed new features for Golang microservices interacting with multiple AWS services, expanding platform capabilities.",
-        "Integrated user-facing components on frontend apps with React, TypeScript, and SASS, creating a smoother user experience and boosting overall app performance.",
-        "Built a dynamic testing environment pipeline using GitHub Actions, Terraform, and S3 that transformed our frontend validation process and brought developers, product owners, and designers together in a more streamlined workflow within just 6 months."
+        "**Developed microservices** in **Go** that integrate with multiple AWS services including **S3**, **Lambda**, **RDS**, and **API Gateway**, **focusing on scalable backend architecture**.",
+        "**Built automated CI/CD pipelines** leveraging **GitHub Actions** and **Terraform** to automatically lint code, execute unit and integration tests for pull requests, and **reduce production bug introduction**.",
+        "Created ephemeral testing environments using **GitHub Actions**, **Terraform**, and **S3**, **accelerating frontend validation processes** and streamlining collaboration between developers and product owners."
       ]
     },
     {
       "name": "EllisDon",
       "position": "FullStack Developer",
-      "startDate": "Apr 2020",
-      "endDate": "Mar 2021",
+      "startDate": "May 2019",
+      "endDate": "Apr 2020",
       "summary": [
-        "Developed and maintained services using ReactJS, Spring Boot (Java), Express (Node.js), NestJS (TypeScript), and MongoDB, ensuring seamless feature integration, resolving bugs, and enhancing the codebase for better maintainability.",
-        "Optimized project quality through automated CI pipelines for unit testing and code linting, creating a more consistent development workflow."
+        "**Developed and maintained full-stack applications** using **ReactJS**, **Spring Boot** (Java), **Express** (Node.js), **NestJS** (TypeScript), and **MongoDB**, ensuring seamless feature integration and enhanced code maintainability.",
+        "**Implemented automated CI pipelines** for unit testing and code quality enforcement using linting tools, improving project maintainability and reducing technical debt."
       ]
     },
     {
@@ -65,8 +67,8 @@
       "startDate": "Sep 2018",
       "endDate": "Mar 2019",
       "summary": [
-        "Built a data aggregation system using Vue.js, Python, and Flask to streamline analysis of data from third-party APIs and website content.",
-        "Provisioned and managed databases and virtual machines in DigitalOcean to host applications, significantly reducing the feedback loop between developers and stakeholders."
+        "Built a data aggregation system using **Vue.js**, **Python**, and **Flask** to **streamline analysis of data** from third-party APIs and website content.",
+        "**Provisioned and managed databases and virtual machines** in **DigitalOcean** to host applications, **significantly reducing the feedback loop** between developers and stakeholders."
       ]
     }
   ],
@@ -76,8 +78,7 @@
       "image": {
         "url": "/argo.png"
       },
-      "description": "Basic Eks setup with argo, crossplane, vault and jenkins. It's a starter env to play around with new tech.",
-      "github": "https://github.com/PierreStephaneVoltaire/kubernetes-playground"
+      "description": "Basic Eks setup with argo, crossplane, vault and jenkins. It's a starter env to play around with new tech.",     "github": "https://github.com/PierreStephaneVoltaire/kubernetes-playground"
     },
     {
       "name": "Personal Website",
@@ -111,25 +112,25 @@
   "skills": {
     "Languages": [
       {
-        "icon": "https://simpleicons.org/icons/html5.svg",
+        "icon": "/icons/html5.svg",
         "name": "Java"
       },
       {
-        "icon": "https://simpleicons.org/icons/typescript.svg",
+        "icon": "/icons/typescript.svg",
         "name": "Typescript"
       },
       {
-        "icon": "https://simpleicons.org/icons/go.svg",
+        "icon": "/icons/go.svg",
         "name": "Golang"
       },
       {
-        "icon": "https://simpleicons.org/icons/python.svg",
+        "icon": "/icons/python.svg",
         "name": "Python"
       }
     ],
     "System Administration": [
       {
-        "icon": "https://simpleicons.org/icons/gnubash.svg",
+        "icon": "/icons/gnubash.svg",
         "name": "bash"
       },
       {
@@ -137,17 +138,17 @@
         "name": "powershell"
       },
       {
-        "icon": "https://simpleicons.org/icons/gnubash.svg",
+        "icon": "/icons/gnubash.svg",
         "name": "cloudinit"
       }
     ],
     "cloud": [
       {
-        "icon": "https://simpleicons.org/icons/amazonwebservices.svg",
+        "icon": "/icons/amazonwebservices.svg",
         "name": "aws"
       },
       {
-        "icon": "https://simpleicons.org/icons/digitalocean.svg",
+        "icon": "/icons/digitalocean.svg",
         "name": "digitalocean"
       },
       {
@@ -157,189 +158,189 @@
     ],
     "Web Development": [
       {
-        "icon": "https://simpleicons.org/icons/html5.svg",
+        "icon": "/icons/html5.svg",
         "name": "HTML"
       },
       {
-        "icon": "https://simpleicons.org/icons/css3.svg",
+        "icon": "/icons/css3.svg",
         "name": "CSS"
       },
       {
-        "icon": "https://simpleicons.org/icons/javascript.svg",
+        "icon": "/icons/javascript.svg",
         "name": "JavaScript"
       },
       {
-        "icon": "https://simpleicons.org/icons/springboot.svg",
+        "icon": "/icons/springboot.svg",
         "name": "SpringBoot"
       },
       {
-        "icon": "https://simpleicons.org/icons/gin.svg",
+        "icon": "/icons/gin.svg",
         "name": "Gin"
       },
       {
-        "icon": "https://simpleicons.org/icons/nestjs.svg",
+        "icon": "/icons/nestjs.svg",
         "name": "NestJS"
       },
       {
-        "icon": "https://simpleicons.org/icons/vuedotjs.svg",
+        "icon": "/icons/vuedotjs.svg",
         "name": "Vue.js"
       },
       {
-        "icon": "https://simpleicons.org/icons/react.svg",
+        "icon": "/icons/react.svg",
         "name": "React.js"
       },
       {
-        "icon": "https://simpleicons.org/icons/angular.svg",
+        "icon": "/icons/angular.svg",
         "name": "Angular"
       },
       {
-        "icon": "https://simpleicons.org/icons/jquery.svg",
+        "icon": "/icons/jquery.svg",
         "name": "Jquery"
       },
       {
-        "icon": "https://simpleicons.org/icons/flask.svg",
+        "icon": "/icons/flask.svg",
         "name": "Flask"
       },
       {
-        "icon": "https://simpleicons.org/icons/django.svg",
+        "icon": "/icons/django.svg",
         "name": "django"
       }
     ],
     "Databases, Queues and Search engines": [
       {
-        "icon": "https://simpleicons.org/icons/amazondynamodb.svg",
+        "icon": "/icons/amazondynamodb.svg",
         "name": "dynamodb"
       },
       {
-        "icon": "https://simpleicons.org/icons/mongodb.svg",
+        "icon": "/icons/mongodb.svg",
         "name": "mongodb"
       },
       {
-        "icon": "https://simpleicons.org/icons/postgresql.svg",
+        "icon": "/icons/postgresql.svg",
         "name": "postgresql"
       },
       {
-        "icon": "https://simpleicons.org/icons/amazonrds.svg",
+        "icon": "/icons/amazonrds.svg",
         "name": "rds"
       },
       {
-        "icon": "https://simpleicons.org/icons/mysql.svg",
+        "icon": "/icons/mysql.svg",
         "name": "mysql"
       },
       {
-        "icon": "https://simpleicons.org/icons/sqlite.svg",
+        "icon": "/icons/sqlite.svg",
         "name": "sqlite"
       },
       {
-        "icon": "https://simpleicons.org/icons/amazondocumentdb.svg",
+        "icon": "/icons/amazondocumentdb.svg",
         "name": "Documentdb"
       },
       {
-        "icon": "https://simpleicons.org/icons/elasticsearch.svg",
+        "icon": "/icons/elasticsearch.svg",
         "name": "elasticsearch"
       },
       {
-        "icon": "https://simpleicons.org/icons/amazonsqs.svg",
+        "icon": "/icons/amazonsqs.svg",
         "name": "sqs"
       },
       {
-        "icon": "https://simpleicons.org/icons/rabbitmq.svg",
+        "icon": "/icons/rabbitmq.svg",
         "name": "rabbitmq"
       }
     ],
     "CI/CD": [
       {
-        "icon": "https://simpleicons.org/icons/jenkins.svg",
+        "icon": "/icons/jenkins.svg",
         "name": "jenkins"
       },
       {
-        "icon": "https://simpleicons.org/icons/circleci.svg",
+        "icon": "/icons/circleci.svg",
         "name": "circleci"
       },
       {
-        "icon": "https://simpleicons.org/icons/amazonwebservices.svg",
+        "icon": "/icons/amazonwebservices.svg",
         "name": "codedeploy"
       },
       {
-        "icon": "https://simpleicons.org/icons/github.svg",
+        "icon": "/icons/github.svg",
         "name": "github actions"
       },
       {
-        "icon": "https://simpleicons.org/icons/gitlab.svg",
+        "icon": "/icons/gitlab.svg",
         "name": "gitlab ci"
       },
       {
-        "icon": "https://simpleicons.org/icons/argo.svg",
+        "icon": "/icons/argo.svg",
         "name": "argocd"
       }
     ],
     "Containerization & Orchestration": [
       {
-        "icon": "https://simpleicons.org/icons/docker.svg",
+        "icon": "/icons/docker.svg",
         "name": "Docker"
       },
       {
-        "icon": "https://simpleicons.org/icons/podman.svg",
+        "icon": "/icons/podman.svg",
         "name": "Podman"
       },
       {
-        "icon": "https://simpleicons.org/icons/docker.svg",
+        "icon": "/icons/docker.svg",
         "name": "Docker Compose"
       },
       {
-        "icon": "https://simpleicons.org/icons/helm.svg",
+        "icon": "/icons/helm.svg",
         "name": "Helm"
       },
       {
-        "icon": "https://simpleicons.org/icons/amazonecs.svg",
+        "icon": "/icons/amazonecs.svg",
         "name": "Ecs"
       },
       {
-        "icon": "https://simpleicons.org/icons/awsfargate.svg",
+        "icon": "/icons/awsfargate.svg",
         "name": "Fargate"
       },
       {
-        "icon": "https://simpleicons.org/icons/amazoneks.svg",
+        "icon": "/icons/amazoneks.svg",
         "name": "eks"
       },
       {
-        "icon": "https://simpleicons.org/icons/kubernetes.svg",
+        "icon": "/icons/kubernetes.svg",
         "name": "kubernetes"
       }
     ],
     "Iac & automation": [
       {
-        "icon": "https://simpleicons.org/icons/terraform.svg",
+        "icon": "/icons/terraform.svg",
         "name": "terraform"
       },
       {
-        "icon": "https://simpleicons.org/icons/terraform.svg",
+        "icon": "/icons/terraform.svg",
         "name": "terragrunt"
       },
       {
-        "icon": "https://simpleicons.org/icons/amazonwebservices.svg",
+        "icon": "/icons/amazonwebservices.svg",
         "name": "Cloudformation"
       },
       {
-        "icon": "https://simpleicons.org/icons/amazonwebservices.svg",
+        "icon": "/icons/amazonwebservices.svg",
         "name": "aws cdk"
       },
       {
-        "icon": "https://simpleicons.org/icons/awslambda.svg",
+        "icon": "/icons/awslambda.svg",
         "name": "aws sam"
       },
       {
-        "icon": "https://simpleicons.org/icons/serverless.svg",
+        "icon": "/icons/serverless.svg",
         "name": "serverless"
       }
     ],
     "Idp": [
       {
-        "icon": "https://simpleicons.org/icons/keycloak.svg",
+        "icon": "/icons/keycloak.svg",
         "name": "keycloak"
       },
       {
-        "icon": "https://simpleicons.org/icons/amazoncognito.svg",
+        "icon": "/icons/amazoncognito.svg",
         "name": "aws cognito"
       },
       {
@@ -349,17 +350,27 @@
     ],
     "Monitoring": [
       {
-        "icon": "https://simpleicons.org/icons/datadog.svg",
+        "icon": "/icons/datadog.svg",
         "name": "datadog"
+      }
+    ],
+    "Certifications": [
+      {
+        "name": "HashiCorp Certified: Terraform Associate (003) (HCTA0-003)",
+        "issuer": "HashiCorp",
+        "date": "June 2025 – June 2027"
+      },
+      {
+        "name": "AWS Certified Solutions Architect - Professional (SAP-C02)",
+        "issuer": "Amazon Web Services",
+        "date": "In Progress"
       }
     ]
   },
   "learning": [
     "Crossplane",
     "Azure",
-    "Apache kafka",
-    ".Net Core 7",
-    "Istio (Service Mesh)"
+    "Apache kafka"
   ],
   "hobbies": [
 
