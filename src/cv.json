@@ -332,6 +332,10 @@
       {
         "icon": "/icons/serverless.svg",
         "name": "serverless"
+      },
+      {
+        "icon": "/icons/kubernetes.svg",
+        "name": "crossplane"
       }
     ],
     "Idp": [
@@ -368,7 +372,6 @@
     ]
   },
   "learning": [
-    "Crossplane",
     "Azure",
     "Apache kafka"
   ],
