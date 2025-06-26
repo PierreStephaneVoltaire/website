@@ -2,7 +2,7 @@
   "profile": {
     "name": "Pierre-Stéphane Voltaire",
     "jobTitle": "Senior Fullstack Developer & Devops Engineer",
-    "about": "I'm a FullStack Software/DevOps Engineer with over 7 years of experience in building software.\nI have hands-on experience with AWS, containerized build environments, CI/CD tools, and Infrastructure as Code (IaC).\nI've developed and maintained a wide range of services using Java, Python, Golang, TypeScript, and Node.js.\nI'm passionate about creating scalable solutions and playing with new tech.",
+    "about": "Senior Full-Stack Developer and DevOps Engineer with over 7 years of experience building scalable web applications and cloud-native services. Strong expertise in TypeScript/JavaScript, React, Node.js, Java, Go, and Python, along with extensive backend development experience. Proficient in architecting microservices and serverless solutions, optimizing databases, implementing CI/CD pipelines, leveraging AWS cloud platforms, containerization (Docker, Kubernetes), and Infrastructure as Code (Terraform, CloudFormation). Experienced in leading cloud migration initiatives and mentoring development teams on cloud-native architectures.",
     "picture": "/profileavatar.png",
     "links": [
       {
@@ -24,41 +24,48 @@
   },
   "experiences": [
     {
-      "name": "MUFG Investor Service",
+      "name": "Mitsubishi UFJ Financial Group",
       "position": "Senior Platform Engineer",
       "startDate": "Mar 2021",
       "endDate": "Present",
       "summary": [
-        "**Developed cloud-native applications** including a **FastAPI** (Python) GitLab backup solution protecting **∼1,000 repositories** against extended outages, with deployment orchestrated through **ArgoCD** and **Kustomize** for flexible environment management.",
+        "**Developed high-availability GitLab backup solution** using **FastAPI** (Python) and **Redis** caching, protecting **1,000+ repositories** with scalable multi-instance architecture deployed via **ArgoCD** and **Kustomize**.",
+        "**Architected cloud migration strategies** for legacy **Java** and **.NET** applications, redesigning monolithic systems into serverless **Lambda** functions and containerized microservices, achieving significant cost savings through **KEDA** autoscaling and resource optimization.",
+        "**Optimized database performance** during critical outages by identifying and resolving low-performing **Oracle** queries on **RDS**, ensuring system stability and improved response times.",
+        "**Built secure configuration management tools** using **Node.js** and **Python Lambda** functions integrated with **Jenkins**, streamlining secret management and application deployment processes.",
         "**Automated EKS cluster upgrades** for **20+ production clusters** using **GitLab CI** and **Terraform**, eliminating manual operations and **reducing AWS extended support costs by $6K/month**.",
-        "**Architected and implemented CI/CD pipelines** using **GitLab CI**, **CodeDeploy**, and custom **Python**/**Bash**/**Powershell** automation scripts, **reducing production deployment time by 94%** from hours to minutes.",
-        "**Developed** secure and efficient **processes and tools for managing secrets and injecting application** configurations using **Jenkins** and **Lambda** functions in **Python** and **Node.js**.",
-        "**Led security hardening initiatives** during the migration of **Java** and **.NET** web applications to AWS, **aligning with SOC 2 compliance** by enhancing network security with HTTPS and **ACM** certificates, encrypting **EFS** storage with **AWS KMS**, and utilizing IAM for access control enforcement.",
+        "**Architected and implemented CI/CD pipelines** using **GitLab CI**, **CodeDeploy**, and custom **Python**/**Bash**/**PowerShell** automation scripts, **reducing production deployment time by 94%** from hours to minutes.",
+        "**Led security hardening initiatives** during AWS migration, **aligning with SOC 2 compliance** by enhancing network security with HTTPS and **ACM** certificates, encrypting **EFS** storage with **AWS KMS**, and utilizing **IAM** for access control enforcement.",
         "**Migrated legacy source control systems** from **TFS** and **SVN** to **GitLab**, ensuring seamless version control transition and implementing **GitOps** workflows.",
-        "**Optimized artifact management** across **Sonatype Nexus**, **GitLab**, and **Amazon ECR** for **Java**, **.NET**, **Python** packages and Docker images, improving deployment reliability.",
-        "**Provisioned cloud environments** for greenfield applications using Infrastructure as Code tools including **CloudFormation**, **Terraform**, and **AWS CDK**, enabling rapid scalable deployments.",
-        "**Enhanced observability** by integrating **Datadog APM** into native cloud applications, **accelerating troubleshooting** and improving performance visibility."
+        "**Optimized artifact management** across **Sonatype Nexus**, **GitLab**, and **Amazon ECR** for **Java**, **.NET**, **Python** packages and **Docker** images, improving deployment reliability.",
+        "**Provisioned cloud environments** for greenfield applications using **CloudFormation**, **Terraform**, and **AWS CDK**, enabling rapid scalable deployments.",
+        "**Implemented comprehensive monitoring solutions** integrating **Datadog APM** into cloud-native applications, **accelerating troubleshooting** and improving performance visibility.",
+        "**Mentored development teams** on cloud-native architectures, guiding the adoption of serverless patterns and Docker-based solutions while maintaining hands-on development of critical services."
       ]
     },
     {
       "name": "Airborne App",
-      "position": "FullStack Developer",
-      "startDate": "Mar 2020",
-      "endDate": "Aug 2021",
+      "position": "Full-Stack Developer",
+      "startDate": "Aug 2020",
+      "endDate": "Mar 2021",
       "summary": [
-        "**Developed microservices** in **Go** that integrate with multiple AWS services including **S3**, **Lambda**, **RDS**, and **API Gateway**, **focusing on scalable backend architecture**.",
-        "**Built automated CI/CD pipelines** leveraging **GitHub Actions** and **Terraform** to automatically lint code, execute unit and integration tests for pull requests, and **reduce production bug introduction**.",
-        "Created ephemeral testing environments using **GitHub Actions**, **Terraform**, and **S3**, **accelerating frontend validation processes** and streamlining collaboration between developers and product owners."
+        "**Developed RESTful microservices** in **Go** with **PostgreSQL**, implementing CRUD operations and business logic while integrating with multiple AWS services (**S3**, **Lambda**, **RDS**).",
+        "**Built responsive frontend features** using **React**, **TypeScript**, and **SASS**, focusing on performance optimization and seamless API integration.",
+        "**Implemented comprehensive tests** using **Jest** and integration tests, ensuring code quality through automated CI/CD pipelines with **GitHub Actions**.",
+        "**Created ephemeral testing environments** using **GitHub Actions**, **Terraform**, and **S3**, **accelerating frontend validation** and improving developer-product owner collaboration."
       ]
     },
     {
       "name": "EllisDon",
-      "position": "FullStack Developer",
+      "position": "Full-Stack Developer",
       "startDate": "May 2019",
       "endDate": "Apr 2020",
       "summary": [
-        "**Developed and maintained full-stack applications** using **ReactJS**, **Spring Boot** (Java), **Express** (Node.js), **NestJS** (TypeScript), and **MongoDB**, ensuring seamless feature integration and enhanced code maintainability.",
-        "**Implemented automated CI pipelines** for unit testing and code quality enforcement using linting tools, improving project maintainability and reducing technical debt."
+        "**Built internal reporting system** using **React** and **Spring Boot** with **MongoDB**, creating dynamic forms and reducing frontend bundle size through code optimization.",
+        "**Implemented Elasticsearch fuzzy search** for internal documents and forms, significantly improving user search experience and document discovery.",
+        "**Developed interactive onboarding tutorial** in **React** to improve the onboarding experience for new users, streamlining user adoption and reducing support requests.",
+        "**Maintained full-stack applications** using **Node.js**, **TypeScript** (**Express**, **NestJS**) and **Java** (**Spring Boot**), ensuring high code quality through comprehensive unit testing with **Jest** and **JUnit**.",
+        "**Optimized application performance** through efficient database query refactoring and caching strategies, improving response times for critical business operations."
       ]
     },
     {
@@ -67,7 +74,7 @@
       "startDate": "Sep 2018",
       "endDate": "Mar 2019",
       "summary": [
-        "Built a data aggregation system using **Vue.js**, **Python**, and **Flask** to **streamline analysis of data** from third-party APIs and website content.",
+        "**Built data aggregation system** using **Vue.js**, **Python**, and **Flask** to **streamline analysis of data** from third-party APIs and website content.",
         "**Provisioned and managed databases and virtual machines** in **DigitalOcean** to host applications, **significantly reducing the feedback loop** between developers and stakeholders."
       ]
     }
