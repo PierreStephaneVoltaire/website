@@ -9,71 +9,59 @@ interface ResumeDownloadProps {
 
 const ResumeDownload = ({ resumeOptions }: ResumeDownloadProps) => {
   const [selectedResume, setSelectedResume] = useState<string>(resumeOptions[0]?.path || '');
-  const [isRateLimited, setIsRateLimited] = useState(false);
-  const [countdown, setCountdown] = useState(0);
 
-  // Rate limiting logic
-  const handleDownload = () => {
-    // Check if user is already rate limited
-    if (isRateLimited) {
-      return;
-    }
-
-    // Get current timestamp and download history from localStorage
-    const now = Date.now();
-    const downloadHistory = JSON.parse(localStorage.getItem('resumeDownloads') || '[]');
-    
-    // Clean up old downloads (older than 1 minute)
-    const recentDownloads = downloadHistory.filter((timestamp: number) => now - timestamp < 60000);
-    
-    // Check if user has downloaded too many times (more than 3 in a minute)
-    if (recentDownloads.length >= 3) {
-      setIsRateLimited(true);
-      setCountdown(60);
-      
-      // Set a countdown timer
-      const timer = setInterval(() => {
-        setCountdown((prev) => {
-          if (prev <= 1) {
-            clearInterval(timer);
-            setIsRateLimited(false);
-            return 0;
-          }
-          return prev - 1;
-        });
-      }, 1000);
-      
-      return;
-    }
-    
-    // Add current timestamp to download history
-    localStorage.setItem('resumeDownloads', JSON.stringify([...recentDownloads, now]));
-    
-    // Trigger the download
+  const handleViewResume = () => {
     window.open(selectedResume, '_blank');
   };
 
   return (
     <div className="mt-8 pt-6 border-t border-gray-700">
-      <h3 className="text-white text-2xl font-bold text-left lg:text-center mb-4">Download Resume</h3>
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <select 
-          value={selectedResume}
-          onChange={(e) => setSelectedResume(e.target.value)}
-          className="bg-gray-800 text-white px-4 py-2 rounded-md w-full sm:w-auto"
-        >
+      <h3 className="text-white text-2xl font-bold text-left lg:text-center mb-4">View Resume</h3>
+      
+      {/* No-JS fallback: Direct view links */}
+      <noscript>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           {resumeOptions.map((option, index) => (
-            <option key={index} value={option.path}>
-              {option.name}
-            </option>
+            <a 
+              key={index}
+              href={option.path}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-700 text-white text-center w-full sm:w-auto"
+            >
+              View {option.name}
+            </a>
           ))}
-        </select>
+        </div>
+      </noscript>
+      
+      {/* JavaScript-enabled version */}
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="relative w-full sm:w-auto">
+          <select 
+            value={selectedResume}
+            onChange={(e) => setSelectedResume(e.target.value)}
+            className="bg-gray-800 text-white pl-4 pr-10 py-2 rounded-md w-full sm:w-auto appearance-none cursor-pointer"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23ffffff' d='M6 9L1 4h10z'/%3E%3C/svg%3E")`,
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'right 12px center',
+              backgroundSize: '12px'
+            }}
+          >
+            {resumeOptions.map((option, index) => (
+              <option key={index} value={option.path}>
+                {option.name}
+              </option>
+            ))}
+          </select>
+        </div>
+        
         <button 
-          onClick={handleDownload}
-          disabled={isRateLimited}
-          className={`px-4 py-2 rounded-md w-full sm:w-auto ${isRateLimited ? 'bg-gray-600 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'}`}
+          onClick={handleViewResume}
+          className="px-4 py-2 rounded-md w-full sm:w-auto transition-colors bg-blue-600 hover:bg-blue-700 text-white"
         >
-          {isRateLimited ? `Try again in ${countdown}s` : 'Download Resume'}
+          View Resume
         </button>
       </div>
     </div>
