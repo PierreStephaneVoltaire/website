@@ -9,3 +9,4 @@ export {default as Hobbies} from './Hobbies.tsx';
 export {default as RippleButton} from './RippleButton.tsx';
 export {default as SEO} from './SEO.tsx';
 export {default as Certifications} from './Certifications.tsx';
+export {default as ThemeToggle} from './ThemeToggle.tsx';

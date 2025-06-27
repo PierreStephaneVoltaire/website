@@ -17,14 +17,16 @@ const Profile = ({profile}: ProfileSectionProps) => (
             <p className="text-white text-xl pt-4">{profile.jobTitle}</p>
             <div className="flex gap-4 mt-4">
                 {profile.links.map((link, idx) => (
-                    <button key={idx}
-                            className="w-10 h-10 flex items-center justify-center rounded-full  relative overflow-hidden"
+                    <a 
+                        key={idx}
+                        href={link.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 flex items-center justify-center rounded-full relative overflow-hidden group"
                     >
-                        <a href={link.url} target="_blank" rel="noopener noreferrer">
-                            <i className={`fa-brands ${link.icon} text-2xl`}></i>
-                        </a>
-                    </button>
-
+                        <i className={`fa-brands ${link.icon} text-2xl relative z-10`}></i>
+                        <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+                    </a>
                 ))}
             </div>
 
@@ -37,7 +39,7 @@ const Profile = ({profile}: ProfileSectionProps) => (
         <div className="flex flex-col justify-evenly py-3 border-t border-gray-700">
             <h3 className="text-white text-xl font-bold">Contact Policy</h3>
             <p className="text-gray-300 mt-2">
-                <span className="bg-blue-600 text-white px-2 py-1 rounded-md text-sm mr-2">Employed but seeking new opportunities</span>
+                <span className="employment-status bg-blue-600 text-white px-2 py-1 rounded-md text-sm mr-2">Employed but seeking new opportunities</span>
                 <br className="block md:hidden" />
                 <span className="mt-2 md:mt-0 inline-block">Email, LinkedIn direct message, or text responses within 48 hours.</span>
             </p>

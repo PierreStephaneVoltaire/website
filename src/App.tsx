@@ -1,4 +1,5 @@
 import {Education, Experience, Hobbies, Learning, Profile, Projects, ResumeDownload, SEO, Skills, Certifications} from './components';
+import ThemeToggle from './components/ThemeToggle';
 import cvData from "./cv.json"
 
 const App = () => {    
@@ -8,8 +9,9 @@ const App = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-darkblue text-white">
+        <div className="min-h-screen bg-darkblue text-white relative">
             <SEO />
+            <ThemeToggle />
                         
             <div className="py-12 px-6 flex justify-evenly flex-wrap bg-darkblue">
                 <div className="w-full lg:w-1/2 p-4">

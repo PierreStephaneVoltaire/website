@@ -39,7 +39,7 @@ const Skills = ({skills}: SkillsSectionProps) => {
                                 if (isSkillItem(item)) {
                                     return (
                                         <span key={i}
-                                              className="bg-white text-black font-semibold px-3 py-0.5 rounded-full flex items-center">
+                                              className="pill bg-white text-black font-semibold px-3 py-0.5 rounded-full flex items-center">
                                             <img src={item.icon} alt={item.name} className="w-5 h-5 mr-2"/>
                                             {item.name}
                                         </span>
