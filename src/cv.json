@@ -85,7 +85,8 @@
       "image": {
         "url": "/argo.png"
       },
-      "description": "Basic Eks setup with argo, crossplane, vault and jenkins. It's a starter env to play around with new tech.",     "github": "https://github.com/PierreStephaneVoltaire/kubernetes-playground"
+      "description": "Basic Eks setup with argo, crossplane, vault and jenkins. It's a starter env to play around with new tech.",
+      "github": "https://github.com/PierreStephaneVoltaire/kubernetes-playground"
     },
     {
       "name": "Personal Website",
@@ -383,7 +384,5 @@
     "Apache kafka"
   ],
   "hobbies": [
-
-
   ]
 }

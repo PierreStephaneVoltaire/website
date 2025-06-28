@@ -91,13 +91,13 @@ body {
 }
 
 .theme-light .bg-blue-600 {
-    background-color: #e0e7ff !important; 
-    color: #1f2937 !important; 
+    background-color: #e0e7ff !important;
+    color: #1f2937 !important;
     font-weight: 500 !important;
 }
 
 .theme-light .hover\:bg-blue-700:hover {
-    background-color: #c7d2fe !important; 
+    background-color: #c7d2fe !important;
     color: #1f2937 !important;
     font-weight: 500 !important;
 
@@ -122,9 +122,9 @@ body {
 
 .theme-light .employment-status {
     display: inline-block !important;
-    background-color: #e0e7ff !important; 
-    color: #1f2937 !important; 
-    border: 1px solid #c7d2fe !important; 
+    background-color: #e0e7ff !important;
+    color: #1f2937 !important;
+    border: 1px solid #c7d2fe !important;
 }
 
 .section-title {
@@ -146,6 +146,7 @@ body {
     background-color: #ffffff !important;
     color: #000000 !important;
 }
+
 .ripple {
     position: absolute;
     border-radius: 50%;
@@ -156,13 +157,14 @@ body {
 }
 
 .theme-light .ripple {
-    background-color: rgba(0, 0, 0, 0.15) !important; 
+    background-color: rgba(0, 0, 0, 0.15) !important;
 }
 
 /* Smooth transitions for theme changes */
 * {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -173,9 +175,9 @@ body {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
-  }
-  
-  .focus\:not-sr-only:focus {
+}
+
+.focus\:not-sr-only:focus {
     position: static;
     width: auto;
     height: auto;
@@ -184,4 +186,4 @@ body {
     overflow: visible;
     clip: auto;
     white-space: normal;
-  }
+}
