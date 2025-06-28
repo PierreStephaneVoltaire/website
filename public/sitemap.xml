@@ -1,9 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://psvoltaire.ca/</loc>
-    <lastmod>2025-05-09</lastmod>
+    <lastmod>2025-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://psvoltaire.ca/profileavatar.png</image:loc>
+      <image:title>Pierre-Stéphane Voltaire - Senior Platform Engineer</image:title>
+      <image:caption>Professional profile photo of Pierre-Stéphane Voltaire, Senior Platform Engineer specializing in AWS and DevOps</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://psvoltaire.ca/argo.png</image:loc>
+      <image:title>Kubernetes Playground Project</image:title>
+      <image:caption>ArgoCD interface showing Kubernetes deployment management</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://psvoltaire.ca/secretz.png</image:loc>
+      <image:title>Vault Promoter CLI Tool</image:title>
+      <image:caption>Secret management and promotion tool built with Go</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://psvoltaire.ca/resumes/Pierre_Voltaire_devops_resume.pdf</loc>
+    <lastmod>2025-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://psvoltaire.ca/resumes/Pierre_Voltaire_developer_resume.pdf</loc>
+    <lastmod>2025-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

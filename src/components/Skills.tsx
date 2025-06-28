@@ -18,13 +18,12 @@ interface SkillsSectionProps {
 }
 
 const Skills = ({skills}: SkillsSectionProps) => {
-    // Filter out the Certifications section
     const skillsEntries = Object.entries(skills).filter(([category]) => category !== 'Certifications');
     
     return (
-        <section>
+        <section aria-labelledby="skills-heading">
             <div className="mt-6 space-y-4">
-                <h3 className="text-white text-2xl font-bold">Skills & Tools</h3>
+                <h3 id="skills-heading" className="text-white text-2xl font-bold">Skills & Tools</h3>
 
                 {skillsEntries.map(([category, items], idx) => (
                     <div key={idx}>
@@ -32,20 +31,23 @@ const Skills = ({skills}: SkillsSectionProps) => {
                             <h4 className="text-white font-semibold">{category}:</h4>
 
                             {items.map((item, i) => {
-                                // Type guard to check if item has icon property (SkillItem)
                                 const isSkillItem = (item: SkillItem | CertificationItem): item is SkillItem => 
                                     'icon' in item;
                                 
                                 if (isSkillItem(item)) {
                                     return (
                                         <span key={i}
-                                              className="pill bg-white text-black font-semibold px-3 py-0.5 rounded-full flex items-center">
-                                            <img src={item.icon} alt={item.name} className="w-5 h-5 mr-2"/>
+                                              className="pill font-semibold flex items-center">
+                                            <img 
+                                                src={item.icon} 
+                                                alt={`${item.name} technology icon`} 
+                                                className="w-5 h-5 mr-2"
+                                            />
                                             {item.name}
                                         </span>
                                     );
                                 }
-                                return null; // Should never happen as Certifications are filtered out
+                                return null;
                             })}
                         </div>
                     </div>

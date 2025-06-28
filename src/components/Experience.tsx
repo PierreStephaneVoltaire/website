@@ -1,4 +1,4 @@
-// ExperienceSection.tsx
+
 import ReactMarkdown from 'react-markdown';
 
 interface Experience {
@@ -14,28 +14,30 @@ interface ExperienceSectionProps {
 }
 
 const Experience = ({experiences}: ExperienceSectionProps) => (
-    <div className="mt-6 md:mt-0">
-        <h3 className="text-white text-2xl font-bold text-left lg:text-center">Experience</h3>
+    <section className="mt-6 md:mt-0" aria-labelledby="experience-heading">
+        <h3 id="experience-heading" className="text-white text-2xl font-bold text-left lg:text-center">Experience</h3>
         <div className="space-y-4 mt-4">
             {experiences.map((exp, idx) => (
-                <div key={idx} className="space-y-2">
+                <article key={idx} className="space-y-2">
                     <div className="flex flex-col items-center text-white md:grid md:grid-cols-6 md:gap-4 md:text-left md:items-start">
-                        <span className="mb-1 md:mb-0 md:col-span-2 md:text-left w-full">{exp.startDate} - {exp.endDate}</span>
-                        <span className="text-xl md:col-span-4 md:text-left  w-full">
-                          {exp.position} @ <br className="block md:hidden" />{exp.name}
-                        </span>
+                        <time className="mb-1 md:mb-0 md:col-span-2 md:text-left w-full">
+                            {exp.startDate} - {exp.endDate}
+                        </time>
+                        <div className="text-xl md:col-span-4 md:text-left w-full">
+                          <h4>{exp.position} @ <br className="block md:hidden" />{exp.name}</h4>
+                        </div>
                     </div>
-                    <ul className="list-disc pl-4 pb-2 pt-2 text-gray-300">
+                    <ul className="list-disc pl-4 pb-2 pt-2 text-gray-300" role="list">
                         {exp.summary.map((summary, i) => (
-                            <li key={i}>
+                            <li key={i} role="listitem">
                                 <ReactMarkdown>{summary}</ReactMarkdown>
                             </li>
                         ))}
                     </ul>
-                </div>
+                </article>
             ))}
         </div>
-    </div>
+    </section>
 );
 
 export default Experience;

@@ -12,27 +12,39 @@ const App = () => {
         <div className="min-h-screen bg-darkblue text-white relative">
             <SEO />
             <ThemeToggle />
+            
+            {/* Skip navigation for keyboard users */}
+            <a 
+                href="#main-content" 
+                className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus:outline-none focus:ring-2 focus:ring-white"
+            >
+                Skip to main content
+            </a>
                         
-            <div className="py-12 px-6 flex justify-evenly flex-wrap bg-darkblue">
-                <div className="w-full lg:w-1/2 p-4">
+            <main id="main-content" className="py-12 px-6 flex justify-evenly flex-wrap bg-darkblue">
+                <section aria-labelledby="personal-info" className="w-full lg:w-1/2 p-4">
+                    <h2 id="personal-info" className="sr-only">Personal Information</h2>
                     <Profile profile={cvData.profile}/>
                     <Skills skills={cvData.skills}/>
                     <Certifications certifications={cvData.skills.Certifications}/>
                     <Education education={cvData.education}/>
                     <Learning learning={cvData.learning}/>
-                </div>
+                </section>
                 
-                <div className="w-full lg:w-1/2 p-4">
+                <section aria-labelledby="professional-info" className="w-full lg:w-1/2 p-4">
+                    <h2 id="professional-info" className="sr-only">Professional Experience</h2>
                     <Experience experiences={cvData.experiences}/>
                     <Hobbies hobbies={cvData.hobbies}/>
-                </div>
+                </section>
                 
-                <div className="w-full p-4">
+                <section aria-labelledby="projects-and-downloads" className="w-full p-4">
+                    <h2 id="projects-and-downloads" className="sr-only">Projects and Downloads</h2>
                     <Projects projects={cvData.projects}/>
                     <ResumeDownload resumeOptions={resumeOptions} />
-                </div>
-            </div>
+                </section>
+            </main>
         </div>
     );
 }
+
 export default App;
