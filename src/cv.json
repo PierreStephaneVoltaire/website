@@ -24,6 +24,17 @@
   },
   "experiences": [
     {
+      "name": "Nasdaq",
+      "position": "Senior DevOps Specialist",
+      "startDate": "Oct 2025",
+      "endDate": "Present",
+      "summary": [
+        "**Maintained and enhanced a cloud-native PHP/Python platform** running on **AWS Lambda**, diagnosing and resolving production bugs to ensure platform reliability and continuity of service.",
+        "**Owned and evolved end-to-end Terraform infrastructure stacks** provisioning full AWS environments, with **Ansible**, **Packer**, and **Python** as core automation layers; participated in live incident response to resolve AWS performance and networking failures.",
+        "**Built and maintained Jenkins CI/CD pipelines** for platform delivery; initiated an **AI productivity program** leveraging **GitHub Copilot** instruction files to standardize AI-assisted development workflows and automatically generate documentation with reduced hallucinations."
+      ]
+    },
+    {
       "name": "Mitsubishi UFJ Financial Group",
       "position": "Senior Platform Engineer",
       "startDate": "Mar 2021",
