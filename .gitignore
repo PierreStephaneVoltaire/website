@@ -12,6 +12,14 @@ dist
 dist-ssr
 *.local
 
+# Generated LaTeX resumes and build intermediates
+public/resumes/*.pdf
+*.aux
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
