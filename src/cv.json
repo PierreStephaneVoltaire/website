@@ -32,6 +32,8 @@
         "**Maintained and enhanced a cloud-native PHP/Python platform** running on **AWS Lambda**, diagnosing and resolving production bugs to ensure platform reliability and continuity of service.",
         "**Owned and evolved end-to-end Terraform infrastructure stacks** provisioning full AWS environments, with **Ansible**, **Packer**, and **Python** as core automation layers; participated in live incident response to resolve AWS performance and networking failures.",
         "**Built and maintained Jenkins CI/CD pipelines** for platform delivery; initiated an **AI productivity program** leveraging **GitHub Copilot** instruction files to standardize AI-assisted development workflows and automatically generate documentation with reduced hallucinations."
+     ,"Designed and implemented a scheduling capability for an enterprise regulatory reporting and risk management SaaS platform using **Amazon S3**, **EventBridge**, and **SQS**, enabling asynchronous event-driven processing."
+      ,"Designed and implemented bidirectional data synchronization between **Amazon S3** and **Azure Blob Storage**, enabling reliable cross-cloud data exchange between AWS and Azure environments."
       ]
     },
     {
