@@ -2,6 +2,7 @@
   "profile": {
     "name": "Pierre-Stéphane Voltaire",
     "jobTitle": "Senior Fullstack Developer & Devops Engineer",
+    "status": "Open to opportunities",
     "about": "Senior Full-Stack Developer and DevOps Engineer with over 7 years of experience building scalable web applications and cloud-native services. Strong expertise in TypeScript/JavaScript, React, Node.js, Java, Go, and Python, along with extensive backend development experience. Proficient in architecting microservices and serverless solutions, optimizing databases, implementing CI/CD pipelines, leveraging AWS cloud platforms, containerization (Docker, Kubernetes), and Infrastructure as Code (Terraform, CloudFormation). Experienced in leading cloud migration initiatives and mentoring development teams on cloud-native architectures.",
     "picture": "/profileavatar.png",
     "links": [

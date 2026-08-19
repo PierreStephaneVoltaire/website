@@ -1,4 +1,5 @@
 import ReactMarkdown from 'react-markdown';
+import SectionLabel from './SectionLabel';
 
 interface Experience {
     name: string;
@@ -13,29 +14,39 @@ interface ExperienceSectionProps {
 }
 
 const Experience = ({experiences}: ExperienceSectionProps) => (
-    <section className="mt-6 md:mt-0" aria-labelledby="experience-heading">
-        <h3 id="experience-heading" className="text-white text-2xl font-bold text-left lg:text-center">Experience</h3>
-        <div className="space-y-4 mt-4">
-            {experiences.map((exp, idx) => (
-                <article key={idx} className="space-y-2">
-                    <div
-                        className="flex flex-col items-center text-white md:grid md:grid-cols-6 md:gap-4 md:text-left md:items-start">
-                        <time className="mb-1 md:mb-0 md:col-span-2 md:text-left w-full">
-                            {exp.startDate} - {exp.endDate}
-                        </time>
-                        <div className="text-xl md:col-span-4 md:text-left w-full">
-                            <h4>{exp.position} @ <br className="block md:hidden"/>{exp.name}</h4>
+    <section className="main-section" aria-labelledby="experience-heading">
+        <SectionLabel label="experience" variant="main" id="experience-heading" />
+        <div className="timeline">
+            {experiences.map((exp, idx) => {
+                const isCurrent = exp.endDate.toLowerCase() === 'present';
+                const dateRange = `${exp.startDate} \u2013 ${exp.endDate}`;
+                return (
+                    <article
+                        key={`${exp.name}-${idx}`}
+                        className={`t-item${isCurrent ? ' current' : ''}`}
+                    >
+                        <div className="t-node" aria-hidden="true" />
+                        <div>
+                            <div className="t-date">{dateRange}</div>
+                            <h3 className="t-title">{exp.position}</h3>
+                            <div className="t-org">// {exp.name}</div>
+                            <ul className="bullets">
+                                {exp.summary.map((bullet, i) => (
+                                    <li key={i}>
+                                        <ReactMarkdown
+                                            components={{
+                                                p: ({children}) => <>{children}</>,
+                                            }}
+                                        >
+                                            {bullet}
+                                        </ReactMarkdown>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
-                    </div>
-                    <ul className="list-disc pl-4 pb-2 pt-2 text-gray-300" role="list">
-                        {exp.summary.map((summary, i) => (
-                            <li key={i} role="listitem">
-                                <ReactMarkdown>{summary}</ReactMarkdown>
-                            </li>
-                        ))}
-                    </ul>
-                </article>
-            ))}
+                    </article>
+                );
+            })}
         </div>
     </section>
 );
