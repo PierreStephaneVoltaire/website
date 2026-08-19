@@ -1,4 +1,5 @@
 import SectionLabel from './SectionLabel';
+import ResumeDownload from './ResumeDownload';
 import {categoryToTagClass} from '../lib/skillColors';
 
 interface Certification {
@@ -11,12 +12,6 @@ interface EducationItem {
     school: string;
     degree: string;
     dates: string;
-}
-
-interface ProfileLink {
-    name: string;
-    url: string;
-    icon?: string;
 }
 
 interface SkillItem {
@@ -38,7 +33,6 @@ interface SkillsData {
 
 interface SidebarProps {
     about: string;
-    links: ProfileLink[];
     certifications: Certification[];
     education: EducationItem[];
     learning: string[];
@@ -65,7 +59,7 @@ const slugifyCategory = (category: string): string =>
 const isSkillItem = (item: SkillItem | CertificationItem): item is SkillItem =>
     'icon' in item;
 
-const Sidebar = ({about, links, certifications, education, learning, skills}: SidebarProps) => {
+const Sidebar = ({about, certifications, education, learning, skills}: SidebarProps) => {
     // Filter the skills grid the same way Skills.tsx does, so we can render it
     // directly inside the sidebar (the certifications category is shown as its
     // own block a bit further down).
@@ -78,27 +72,22 @@ const Sidebar = ({about, links, certifications, education, learning, skills}: Si
                 <p className="about-text" id="about-text">{about}</p>
             </div>
 
-            <div>
-                <SectionLabel label="contact" />
-                <p className="contact-text">
-                    {links.map((link, i) => (
-                        <span key={link.name}>
-                            {i > 0 && <span className="contact-divider" aria-hidden="true"> \u00B7 </span>}
-                            <a
-                                className="contact-link"
-                                href={link.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label={`${link.name} (opens in new window)`}
-                            >
-                                {link.name}
-                            </a>
-                        </span>
-                    ))}
-                    <br />
-                    Responses within 48 hours
-                </p>
-            </div>
+            {education.length > 0 && (
+                <div>
+                    <SectionLabel label="education" />
+                    <div className="edu-list">
+                        {education.map((edu, idx) => (
+                            <div key={idx}>
+                                <div className="edu-deg">{edu.degree}</div>
+                                <div className="edu-school">{edu.school}</div>
+                                <div className="edu-yr">{edu.dates}</div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
+
+            <ResumeDownload />
 
             {skillEntries.length > 0 && (
                 <div>
@@ -138,21 +127,6 @@ const Sidebar = ({about, links, certifications, education, learning, skills}: Si
                                 </div>
                             );
                         })}
-                    </div>
-                </div>
-            )}
-
-            {education.length > 0 && (
-                <div>
-                    <SectionLabel label="education" />
-                    <div className="edu-list">
-                        {education.map((edu, idx) => (
-                            <div key={idx}>
-                                <div className="edu-deg">{edu.degree}</div>
-                                <div className="edu-school">{edu.school}</div>
-                                <div className="edu-yr">{edu.dates}</div>
-                            </div>
-                        ))}
                     </div>
                 </div>
             )}

@@ -1,24 +1,34 @@
 import {useEffect} from 'react';
 import cvData from '../cv.json';
 
+interface SkillEntry {
+    name: string;
+}
+
+interface CvDataWithOptionalSkills {
+    skills?: Record<string, SkillEntry[]>;
+}
+
 const SEO = () => {
+    const data = cvData as typeof cvData & CvDataWithOptionalSkills;
+
     useEffect(() => {
         // Create JSON-LD structured data for Person
         const personSchema = {
             '@context': 'https://schema.org',
             '@type': 'Person',
-            'name': cvData.profile.name,
-            'jobTitle': cvData.profile.jobTitle,
-            'description': cvData.profile.about,
+            'name': data.profile.name,
+            'jobTitle': data.profile.jobTitle,
+            'description': data.profile.about,
             'url': 'https://psvoltaire.ca',
-            'sameAs': cvData.profile.links.map(link => link.url),
-            'knowsAbout': Object.values(cvData.skills).flat().map(skill => skill.name),
-            'alumniOf': cvData.education.map(edu => ({
+            'sameAs': data.profile.links.map(link => link.url),
+            'knowsAbout': Object.values(data.skills ?? {}).flat().map(skill => skill.name),
+            'alumniOf': data.education.map(edu => ({
                 '@type': 'EducationalOrganization',
                 'name': edu.school,
                 'sameAs': `https://www.google.com/search?q=${encodeURIComponent(edu.school)}`
             })),
-            'workExperience': cvData.experiences.map(exp => ({
+            'workExperience': data.experiences.map(exp => ({
                 '@type': 'OrganizationRole',
                 'roleName': exp.position,
                 'startDate': exp.startDate,
@@ -36,7 +46,7 @@ const SEO = () => {
         return () => {
             document.head.removeChild(script);
         };
-    }, []);
+    }, [data]);
 
     return null; // This component doesn't render anything
 };

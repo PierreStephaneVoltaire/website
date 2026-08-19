@@ -17,14 +17,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: '22'
       - name: Install Yarn
         run: |
           npm install -g yarn
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v3
+        uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::${{vars.AWS_ACCOUNT_ID}}:role/${{vars.ROLE_NAME}}
           aws-region: ${{ vars.AWS_REGION }}
@@ -33,14 +33,28 @@ jobs:
           yarn --version
           aws --version
           node --version
-      - name: install
+      - name: Detect resume sources
+        id: resume_sources
+        shell: bash
         run: |
-          yarn
-      - name: build app
+          if [[ -s public/resumes/Pierre_Voltaire_devops_resume.tex && -s public/resumes/Pierre_Voltaire_developer_resume.tex ]]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Compile resumes
+        if: steps.resume_sources.outputs.ready == 'true'
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: |
+            public/resumes/Pierre_Voltaire_devops_resume.tex
+            public/resumes/Pierre_Voltaire_developer_resume.tex
+      - name: Install dependencies
         run: |
-          yarn build
+          yarn install --frozen-lockfile
+      - name: Build app
+        run: yarn build
       - name: Upload to S3
         run: |
           aws s3 sync ./dist s3://${{vars.BUCKET}} --delete
           aws cloudfront create-invalidation --distribution-id ${{vars.DISTRIBUTION_ID}} --paths "/*"
-

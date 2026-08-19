@@ -1,0 +1,376 @@
+\documentclass[11pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=2 cm, % seperation between body and page edge from the top
+    bottom=2 cm, % seperation between body and page edge from the bottom
+    left=2 cm, % seperation between body and page edge from the left
+    right=2 cm, % seperation between body and page edge from the right
+    footskip=1.0 cm, % seperation between body and footer
+% showframe % for debugging
+]{geometry} % for adjusting page geometry
+\usepackage{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 0, 0} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={Pierre-Stephane Voltaire's CV},
+    pdfauthor={Pierre-Stephane Voltaire},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+\input{glyphtounicode}
+\pdfgentounicode=1
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+% Some settings:
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0.15cm} % set column seperation
+\pagenumbering{gobble} % no page numbering
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\fontsize{12pt}{12pt}\selectfont}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+% left space:
+    -1pt
+}{
+% top space:
+    0.3 cm
+}{
+% bottom space:
+    0.2 cm
+} % section title spacing
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$} % custom bullet points
+\newenvironment{highlights}{
+\begin{itemize}[
+topsep=0.10 cm,
+parsep=0.10 cm,
+partopsep=0pt,
+itemsep=0pt,
+leftmargin=0 cm + 20pt
+]
+}{
+\end{itemize}
+} % new environment for highlights
+
+
+\newenvironment{highlightsforbulletentries}{
+\begin{itemize}[
+topsep=0.10 cm,
+parsep=0.10 cm,
+partopsep=0pt,
+itemsep=0pt,
+leftmargin=10pt
+]
+}{
+\end{itemize}
+} % new environment for highlights for bullet entries
+
+\newenvironment{onecolentry}{
+\begin{adjustwidth}{
+0 cm + 0.00001 cm
+}{
+0 cm + 0.00001 cm
+}
+}{
+\end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+\onecolentry
+\def\secondColumn{#2}
+\setcolumnwidth{\fill, 4.5 cm}
+\begin{paracol}{2}
+}{
+\switchcolumn \raggedleft \secondColumn
+\end{paracol}
+\endonecolentry
+} % new environment for two column entries
+
+\newenvironment{threecolentry}[3][]{
+\onecolentry
+\def\thirdColumn{#3}
+\setcolumnwidth{, \fill, 4.5 cm}
+\begin{paracol}{3}
+{\raggedright #2} \switchcolumn
+}{
+\switchcolumn \raggedleft \thirdColumn
+\end{paracol}
+\endonecolentry
+} % new environment for three column entries
+
+\newenvironment{header}{
+\setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+\par\kern\topsep
+} % new environment for the header
+
+\newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+\AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+\put(
+\LenToUnit{\paperwidth-2 cm-0 cm+0.05cm},
+\LenToUnit{\paperheight-1.0 cm}
+){\vtop{{\null}\makebox[0pt][c]{
+\small\color{gray}\textit{Last updated in September 2024}\hspace{\widthof{Last updated in September 2024}}
+}}}%
+}%
+}%
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+
+
+\begin{document}
+\newcommand{\AND}{\unskip
+\cleaders\copy\ANDbox\hskip\wd\ANDbox
+\ignorespaces
+}
+\newsavebox\ANDbox
+\sbox\ANDbox{$|$}
+
+\begin{header}
+\fontsize{15 pt}{15 pt}\selectfont Pierre-Stéphane Voltaire
+
+\vspace{2 pt}
+
+\normalsize
+\kern 5.0 pt%
+\mbox{\hrefWithoutArrow{mailto:psvoltaire96@gmail.com}{psvoltaire96@gmail.com}}%
+\kern 5.0 pt%
+\AND%
+\kern 5.0 pt%
+% \mbox{\hrefWithoutArrow{tel:+1-905-616-0236}{+1(905)-616-0236}}%
+\kern 5.0 pt%
+\AND%
+\kern 5.0 pt%
+\mbox{\hrefWithoutArrow{https://psvoltaire.ca/}{psvoltaire.ca}}%
+\kern 5.0 pt%
+\AND%
+\kern 5.0 pt%
+\mbox{\hrefWithoutArrow{https://www.linkedin.com/in/pierre-stephane-voltaire/}{linkedin.com/in/pierre-stephane-voltaire}}%
+\kern 5.0 pt%
+\AND%
+\kern 5.0 pt%
+\mbox{\hrefWithoutArrow{https://github.com/PierreStephaneVoltaire}{github.com/PierreStephaneVoltaire}}%
+\end{header}
+
+\vspace{2 pt - 0.3 cm}
+
+\section{Summary}
+
+\begin{onecolentry}
+\begin{highlightsforbulletentries}
+
+Senior Full-Stack Developer with over 7 years of experience in building scalable web applications and cloud-native services. Strong expertise in \textbf{TypeScript/JavaScript} and \textbf{React}, along with extensive backend skills in \textbf{Node.js}, \textbf{Java}, \textbf{Go}, and \textbf{Python}. Proficient in architecting microservices and serverless solutions, optimizing databases, implementing CI/CD, leveraging multi-cloud platforms (\textbf{AWS}, \textbf{Azure}), containerization (\textbf{Docker}, \textbf{Kubernetes}), and Infrastructure as Code.
+
+\end{highlightsforbulletentries}
+\end{onecolentry}
+
+\section{Skills}
+
+\begin{onecolentry}
+\textbf{Languages:} TypeScript, JavaScript, Java, Node.js, Python, Go, SQL, Bash
+\end{onecolentry}
+
+\vspace{0.05 cm}
+\begin{onecolentry}
+\textbf{Frontend:} React, Vue.js, Angular, Redux, HTML5, CSS3/SASS, Jest
+\end{onecolentry}
+
+\vspace{0.05 cm}
+\begin{onecolentry}
+\textbf{Backend:} Spring Boot, Express, NestJS, Flask, FastAPI, Django, Gin, OpenAPI, Serverless, Mocha, JUnit
+\end{onecolentry}
+\vspace{0.05 cm}
+\begin{onecolentry}
+\textbf{Databases:} PostgreSQL, MongoDB, Redis, Oracle, MySQL, Elasticsearch, DynamoDB, DocumentDB
+\end{onecolentry}
+
+\vspace{0.05 cm}
+\begin{onecolentry}
+\textbf{Cloud \& DevOps:} AWS (Lambda, EC2, ECS, S3,RDS), Azure, Docker, Kubernetes, Terraform, CI/CD
+\end{onecolentry}
+
+\section{Experience}
+
+\begin{twocolentry}{
+Oct 2025 – Present
+}
+\textbf{Senior DevOps Specialist}
+\end{twocolentry}
+
+\begin{onecolentry}
+\textit{Nasdaq} | \textit{Toronto, ON, CA}
+\end{onecolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+\begin{highlights}
+\item \textbf{Maintained and enhanced a cloud-native PHP/Python platform} running on AWS Lambda, diagnosing and resolving production issues to ensure platform reliability and continuity of service.
+\vspace{0.05 cm}
+
+\item \textbf{Designed event-driven scheduling capabilities} using Amazon S3, EventBridge, and SQS, enabling asynchronous processing for an enterprise regulatory reporting and risk management SaaS platform.
+\vspace{0.05 cm}
+
+\item \textbf{Implemented bidirectional data synchronization} between Amazon S3 and Azure Blob Storage, enabling reliable cross-cloud data exchange between AWS and Azure environments.
+\vspace{0.05 cm}
+
+\item \textbf{Built and maintained Jenkins CI/CD pipelines} for platform delivery and initiated an AI productivity program using GitHub Copilot instruction files to standardize AI-assisted development workflows and documentation.
+\end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{
+Mar 2021 – Oct 2025
+}
+\textbf{Senior Platform Engineer}
+\end{twocolentry}
+
+\begin{onecolentry}
+\textit{Mitsubishi UFJ Financial Group} | \textit{Toronto, ON, CA}
+\end{onecolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+\begin{highlights}
+\item  \textbf{Developed AI code reviewer} in Python using AWS Bedrock (Claude Sonnet 4) to analyze Merge Request diffs and post automated feedback via GitLab API, with smart thread resolution on subsequent commits, \textbf{ accelerating review cycles and improving code quality standards}.
+\vspace{0.05 cm}
+
+\item \textbf{Developed a high-availability GitLab backup solution} using FastAPI (Python) and Redis caching, protecting 1,000+ repositories with scalable multi-instance architecture deployed via ArgoCD and Kustomize.
+\vspace{0.05 cm}
+
+\item \textbf{Architected cloud migration strategies} for legacy Java and .NET applications, redesigning monolithic systems into serverless Lambda functions and containerized microservices, achieving significant cost savings through KEDA autoscaling and resource optimization.
+\vspace{0.05 cm}
+
+\item \textbf{Optimized database performance} during critical outages by identifying and resolving low-performing Oracle queries on RDS, ensuring system stability and improved response times.
+\vspace{0.05 cm}
+
+\item \textbf{Built secure configuration management tools} using Node.js and Python Lambda functions integrated with Jenkins, streamlining secret management and application deployment processes.
+\vspace{0.05 cm}
+
+% \item \textbf{Implemented comprehensive monitoring solutions} integrating Datadog APM into cloud-native applications, accelerating troubleshooting and improving performance visibility.
+% \vspace{0.05 cm}
+
+\item \textbf{Mentored development teams} on cloud-native architectures, guiding the adoption of serverless patterns and Docker-based solutions while maintaining hands-on development of critical services.
+\end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{
+Aug 2020 – Mar 2021
+}
+\textbf{Full-Stack Developer}
+\end{twocolentry}
+
+\begin{onecolentry}
+\textit{Airborne App} | \textit{Oakville, ON, CA}
+\end{onecolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+\begin{highlights}
+\item \textbf{Developed RESTful microservices} in Go with PostgreSQL, implementing CRUD operations and business logic while integrating with multiple AWS services (S3, Lambda, RDS).
+\vspace{0.05 cm}
+
+\item \textbf{Built responsive frontend features} using React, TypeScript, and SASS, focusing on performance optimization and seamless API integration.
+\vspace{0.05 cm}
+
+% \item \textbf{Implemented comprehensive tests} using Jest and integration tests, ensuring code quality through automated CI/CD pipelines with GitHub Actions.
+% \vspace{0.05 cm}
+
+\item \textbf{Created ephemeral testing environments} using GitHub Actions, Terraform, and S3, accelerating frontend validation and improving developer-product owner collaboration.
+\end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{
+May 2019 – Apr 2020
+}
+\textbf{Full-Stack Developer}
+\end{twocolentry}
+
+\begin{onecolentry}
+\textit{EllisDon} | \textit{Mississauga, ON, CA}
+\end{onecolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+\begin{highlights}
+\item \textbf{Built internal reporting system} using React and Spring Boot with MongoDB, creating dynamic forms and reducing frontend bundle size through code optimization.
+\vspace{0.05 cm}
+
+\item \textbf{Implemented Elasticsearch fuzzy search} for internal documents and forms, significantly improving user search experience and document discovery.
+\vspace{0.05 cm}
+\item \textbf{Developed interactive onboarding tutorial} in React to improve the onboarding experience for new users, streamlining user adoption and reducing support requests.
+\vspace{0.05 cm}
+
+\item \textbf{Maintained full-stack applications} using Node.js, Typescript (Express, NestJS) and Java (Springboot), ensuring high code quality through comprehensive unit testing with Jest and JUnit.
+\vspace{0.05 cm}
+
+\item \textbf{Optimized application performance} through efficient database query refactoring and caching strategies, improving response times for critical business operations.
+\end{highlights}
+\end{onecolentry}
+
+\section{Certifications} 
+
+\begin{twocolentry}{
+June 2025 – June 2027
+
+}
+\hrefWithoutArrow{https://www.credly.com/badges/c2c2db13-a312-48b3-b4b2-e720b3b13c7b/linked_in_profile}{\textbf{HashiCorp Certified: Terraform Associate (003) (HCTA0-003)}}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+
+\begin{twocolentry}{
+In Progress
+}
+\textbf{Microsoft Certified: Azure Developer Associate (AZ-204)}\end{twocolentry}
+
+\section{Education}
+
+\begin{twocolentry}{Sept 2016 – Apr 2020}
+\textbf{Sheridan College}, Bachelor of Computer Science – Mobile Computing \end{twocolentry}
+
+\vspace{0.10 cm}
+
+\begin{twocolentry}{Sept 2014 – Aug 2016}
+\textbf{Sheridan College}, Computer Systems Technician – Software Engineering\end{twocolentry}
+
+\vspace{0.10 cm}
+
+\end{document}

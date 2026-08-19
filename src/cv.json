@@ -93,32 +93,6 @@
       ]
     }
   ],
-  "projects": [
-    {
-      "name": "Kubernetes playground",
-      "image": {
-        "url": "/argo.png"
-      },
-      "description": "Basic Eks setup with argo, crossplane, vault and jenkins. It's a starter env to play around with new tech.",
-      "github": "https://github.com/PierreStephaneVoltaire/kubernetes-playground"
-    },
-    {
-      "name": "Personal Website",
-      "image": {
-        "url": "/website.png"
-      },
-      "description": "Personal website built with React and TypeScript, hosted on AWS S3 and CloudFront.",
-      "github": "https://github.com/PierreStephaneVoltaire/website"
-    },
-    {
-      "name": "vault-promoter",
-      "image": {
-        "url": "/secretz.png"
-      },
-      "description": "A solution for managing Secrets and Configs across multiple environments with secret promotion capabilities. Built as a CLI tool using Go.",
-      "github": "https://github.com/PierreStephaneVoltaire/secretz"
-    }
-  ],
   "education": [
     {
       "school": "Sheridan College",
