@@ -1,6 +1,5 @@
 import {Header, Sidebar, Experience, SEO} from './components';
 import cvData from './cv.json';
-import SectionLabel from './components/SectionLabel';
 
 interface SkillEntry {
     name: string;
@@ -50,12 +49,6 @@ const App = () => {
 
                 <main id="main-content" className="main">
                     <Experience experiences={data.experiences} />
-                    <section className="main-section" aria-labelledby="projects-heading">
-                        <SectionLabel label="projects" variant="main" id="projects-heading" />
-                        <h3 className="t-title">NoLift</h3>
-                        <p>A powerlifting meet-prep portal for tracking training, analyzing fatigue and progress, and exploring AI-assisted program reviews. Built with React, Express, typed HTTP and MCP services, and AWS storage, deployed on k3s with Terraform.</p>
-                        <p><a href="https://dev.nolift.training/">Visit NoLift</a> · <a href="https://github.com/PierreStephaneVoltaire/ai-powerlifting">GitHub</a></p>
-                    </section>
                 </main>
             </div>
         </div>

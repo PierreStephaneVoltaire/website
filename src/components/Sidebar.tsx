@@ -89,6 +89,15 @@ const Sidebar = ({about, certifications, education, learning, skills}: SidebarPr
 
             <ResumeDownload />
 
+            <section className="projects" aria-labelledby="projects-heading">
+                <SectionLabel label="projects" id="projects-heading" />
+                <h3>NoLift</h3>
+                <p>A competition-focused training notebook that brings workouts, lift videos, meet results, and competition budgets together to help athletes and coaches make informed decisions.</p>
+                <p>Custom analytics track fatigue, readiness, estimated maxes, and meet projections; an AI coach evaluates programs, analyzes training, and assists with spreadsheet imports. Athletes can also access their data through Discord and MCP tools.</p>
+                <p>Built as a React PWA with an Express gateway and typed domain services on k3s. DynamoDB and S3 store training data and media, while Terraform manages the infrastructure.</p>
+                <p><a href="https://dev.nolift.training/">Visit NoLift</a> · <a href="https://github.com/PierreStephaneVoltaire/ai-powerlifting">GitHub</a></p>
+            </section>
+
             {skillEntries.length > 0 && (
                 <div>
                     <SectionLabel label="skills_and_tools" id="skills-heading" />
